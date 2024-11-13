@@ -16,88 +16,34 @@ import Tail from "@src/components/sections/Tail.astro";
 import KeyboardManager from "@src/components/KeyboardManager.astro";
 import ThemeSwitch from "@src/components/ThemeSwitch.astro";
 
-// import Education from "@src/components/sections/Education.astro";
-// import Images from "@src/components/sections/Images.astro";
-
-// enum PageLayout {
-//   SingleColumn = "single-column",
-//   TwoColumn = "two-column",
-//   Scroll = "scroll",
-// }
 type BlogPost = CollectionEntry<'blog'>;
 
-// const top6Projects = projects.slice(0, 6);
-// const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 
   <main
-    class="relative grid h-full max-w-7xl gap-12 p-8 max-sm:py-16 md:min-h-screen md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6"
+    class="relative grid h-full max-w-7xl gap-12 p-8 pt-16 max-sm:py-16 md:min-h-screen md:grid-cols-6 md:p-16 md:pt-32 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6"
   >
     <div
       class="slide-enter space-y-6 ease-in md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0"
     >
-      <Hero />
-      <About />
-      <ThemeSwitch />
+      <div class="sticky top-0 pt-4">
+        <Hero />
+        <About />
+        <ThemeSwitch />
+      </div>
     </div>
     <div
       class="slide-enter-content space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0"
     >
+
       <Experience className="print:col-span-3" />
       <Projects className="print:hidden" />
       <Skills className="print:hidden" />
-      <!-- { -->
-      <!--   (CV?.pageLayout === PageLayout.TwoColumn || !CV?.pageLayout) && ( -->
-      <!--     <> -->
-      <!--       <Projects className="print:hidden" /> -->
-      <!--       {CV?.images && <Images className="print:hidden" />} -->
-      <!--       {CV?.education && <Education className="order-first" />} -->
-      <!--       <Skills className="print:hidden" /> -->
-      <!--     </> -->
-      <!--   ) -->
-      <!-- } -->
     </div>
   </main>
-  {
-    // CV?.pageLayout !== PageLayout.TwoColumn && (
-    //   <>
-    //     <div class="border-t border-solid border-skin-hue print:hidden" />
-    //     {CV?.pageLayout === PageLayout.SingleColumn && (
-    //       <main class="relative grid max-w-[82rem] gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6">
-    //         <div class="slide-enter-content space-y-6 md:col-span-6">
-    //           <Projects className="print:hidden" />
-    //           {CV?.images && <Images className="print:hidden" />}
-    //           {CV?.education && <Education className="order-first" />}
-    //           <Skills className="print:hidden" />
-    //         </div>
-    //       </main>
-    //     )}
-    //
-    //     {CV.pageLayout === PageLayout.Scroll && (
-    //       <main class="max-w-[97%] p-8 max-md:!max-w-7xl max-sm:py-16 print:max-w-none print:grid-cols-1 print:gap-6">
-    //         <div
-    //           id="carousel"
-    //           class="slide-enter-content scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 mx-auto md:col-span-6 md:overflow-x-auto md:overflow-y-auto print:max-w-none print:grid-cols-1 print:gap-6"
-    //         >
-    //           <div class="flex space-x-0 pb-4 max-md:gap-4 max-sm:flex-col max-sm:space-y-4 md:px-4">
-    //             <Projects className="flex-shrink-0 w-full print:hidden border-skin-hue md:border-solid md:border md:p-4" />
-    //             {CV?.images && (
-    //               <Images className="flex-shrink-0 w-full print:hidden border-skin-hue md:border-solid md:border md:p-4" />
-    //             )}
-    //             {CV?.education && (
-    //               <Education className="flex-shrink-0 w-full md:w-1/3 print:order-first border-skin-hue md:border-solid md:border md:p-4" />
-    //             )}
-    //             <Skills className="flex-shrink-0 w-full md:w-1/3 print:hidden border-skin-hue md:border-solid md:border md:p-4" />
-    //           </div>
-    //         </div>
-    //       </main>
-    //     )}
-    //   </>
-    // )
-  }
-  <Tail />
+  <!-- <Tail /> -->
   <KeyboardManager />
 </BaseLayout>
 

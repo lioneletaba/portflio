@@ -1,58 +1,270 @@
 ---
-import { SITE_TITLE, SITE_TAGLINE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import Ava from '@src/assets/img/ava.jpg';
-import Prose from '../components/Prose.astro';
+// import Ava from '@src/assets/img/ava.jpg';
 import { projects } from './projects/projects';
-import ProjectList from '../components/ProjectList.astro'
-import PostItem from '../components/PostItem.astro';
 
+import About from "@src/components/sections/About.astro";
+import Experience from "@src/components/sections/Experience.astro";
+import Hero from "@src/components/sections/Hero.astro";
+import Projects from "@src/components/sections/Projects.astro";
+import Skills from "@src/components/sections/Skills.astro";
+import Tail from "@src/components/sections/Tail.astro";
+import KeyboardManager from "@src/components/KeyboardManager.astro";
+import ThemeSwitch from "@src/components/ThemeSwitch.astro";
+
+// import Education from "@src/components/sections/Education.astro";
+// import Images from "@src/components/sections/Images.astro";
+
+// enum PageLayout {
+//   SingleColumn = "single-column",
+//   TwoColumn = "two-column",
+//   Scroll = "scroll",
+// }
 type BlogPost = CollectionEntry<'blog'>;
 
-const top6Projects = projects.slice(0, 6);
-const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
+// const top6Projects = projects.slice(0, 6);
+// const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
 ---
 
-<BaseLayout title={SITE_TITLE + ' - ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>
-	<div class='container'>
-		<div class='w-full md:flex md:items-center gap-16 mb-10'>
-      <div class="text-pretty leading-9">
-        <h1 class="text-4xl font-bold mb-4">Hi There 👋, Syakir Here! </h1>
-        <Prose>
-          <div class="text-lg">
-            <p>I am a Front-end Engineer from Indonesia. I love sharing what i know on <a href="https://devaradise.com" target="_blank">devaradise.com</a>, and sometime i also share freebies like this. I'm also active on <a href="https://dev.to/syakirurahman" target="_blank">dev.to</a> and <a href="https://x.com/syakirurahman" target="_blank">twitter</a>.</p>
-            <p>I made Devolio to help you easily set up your own blog and portfolio website. It's a static site built with Astro and Tailwind CSS, and you can deploy it on platforms like <a href="https://app.netlify.com/start/deploy?repository=https://github.com/devaradise/devolio" target="_blank" rel="nofollow noopener">Netlify</a>, <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdevaradise%2Fdevolio" target="_blank" rel="nofollow noopener">Vercel</a>, or <a href="https://pages.cloudflare.com/" target="_blank" rel="nofollow noopener">Cloudflare Pages</a>.</p>  
-          </div>
-        </Prose>
-      </div>
-      <Image src={Ava} alt="Muhammad Syakirurohman" width={300} loading="eager" class="rounded-3xl rotate-3 mx-4 md:mx-0"/>
-		</div>
-		<main>
-      <div class='mt-6 mb-12'>
-        <div class="flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700">
-          <h2 class="text-lg font-bold mb-3">Recent Posts</h2>
-          <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">All posts &raquo;</a>
-        </div>
-        <div>
-          {
-            posts.map((post: BlogPost) => (
-              <PostItem post={post} />
-            ))
-          }      
-        </div>
-        <div class="text-right">
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between gap-2 mb-1">
-          <h2 class="text-lg font-bold mb-3">My Projects</h2>
-          <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">All projects &raquo;</a>
-        </div>
-        <ProjectList projects={top6Projects}/>
-      </div>
-		</main>
-	</div>
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+
+  <main
+    class="relative grid h-full max-w-7xl gap-12 p-8 max-sm:py-16 md:min-h-screen md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6"
+  >
+    <div
+      class="slide-enter space-y-6 ease-in md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0"
+    >
+      <Hero />
+      <About />
+      <ThemeSwitch />
+    </div>
+    <div
+      class="slide-enter-content space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0"
+    >
+      <Experience className="print:col-span-3" />
+      <Projects className="print:hidden" />
+      <Skills className="print:hidden" />
+      <!-- { -->
+      <!--   (CV?.pageLayout === PageLayout.TwoColumn || !CV?.pageLayout) && ( -->
+      <!--     <> -->
+      <!--       <Projects className="print:hidden" /> -->
+      <!--       {CV?.images && <Images className="print:hidden" />} -->
+      <!--       {CV?.education && <Education className="order-first" />} -->
+      <!--       <Skills className="print:hidden" /> -->
+      <!--     </> -->
+      <!--   ) -->
+      <!-- } -->
+    </div>
+  </main>
+  {
+    // CV?.pageLayout !== PageLayout.TwoColumn && (
+    //   <>
+    //     <div class="border-t border-solid border-skin-hue print:hidden" />
+    //     {CV?.pageLayout === PageLayout.SingleColumn && (
+    //       <main class="relative grid max-w-[82rem] gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6">
+    //         <div class="slide-enter-content space-y-6 md:col-span-6">
+    //           <Projects className="print:hidden" />
+    //           {CV?.images && <Images className="print:hidden" />}
+    //           {CV?.education && <Education className="order-first" />}
+    //           <Skills className="print:hidden" />
+    //         </div>
+    //       </main>
+    //     )}
+    //
+    //     {CV.pageLayout === PageLayout.Scroll && (
+    //       <main class="max-w-[97%] p-8 max-md:!max-w-7xl max-sm:py-16 print:max-w-none print:grid-cols-1 print:gap-6">
+    //         <div
+    //           id="carousel"
+    //           class="slide-enter-content scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 mx-auto md:col-span-6 md:overflow-x-auto md:overflow-y-auto print:max-w-none print:grid-cols-1 print:gap-6"
+    //         >
+    //           <div class="flex space-x-0 pb-4 max-md:gap-4 max-sm:flex-col max-sm:space-y-4 md:px-4">
+    //             <Projects className="flex-shrink-0 w-full print:hidden border-skin-hue md:border-solid md:border md:p-4" />
+    //             {CV?.images && (
+    //               <Images className="flex-shrink-0 w-full print:hidden border-skin-hue md:border-solid md:border md:p-4" />
+    //             )}
+    //             {CV?.education && (
+    //               <Education className="flex-shrink-0 w-full md:w-1/3 print:order-first border-skin-hue md:border-solid md:border md:p-4" />
+    //             )}
+    //             <Skills className="flex-shrink-0 w-full md:w-1/3 print:hidden border-skin-hue md:border-solid md:border md:p-4" />
+    //           </div>
+    //         </div>
+    //       </main>
+    //     )}
+    //   </>
+    // )
+  }
+  <Tail />
+  <KeyboardManager />
 </BaseLayout>
+
+<script>
+  const carousel = document.querySelector("#carousel");
+
+  if (carousel) {
+    let isScrolling = true;
+    let scrollSpeed = 2;
+    let direction = 1;
+    let pauseTimeout: NodeJS.Timeout;
+
+    const startAutoScroll = () => {
+      const scroll = () => {
+        if (!isScrolling) return;
+
+        if (
+          //@ts-ignore
+          carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth ||
+          carousel.scrollLeft <= 0
+        ) {
+          direction *= -1;
+          isScrolling = false;
+          clearTimeout(pauseTimeout);
+          pauseTimeout = setTimeout(() => {
+            isScrolling = true;
+            requestAnimationFrame(scroll);
+          }, 1000);
+        }
+
+        carousel.scrollLeft += scrollSpeed * direction;
+        requestAnimationFrame(scroll);
+      };
+
+      requestAnimationFrame(scroll);
+    };
+
+    const stopAutoScroll = () => {
+      isScrolling = false;
+    };
+
+    const handleUserInteraction = () => {
+      stopAutoScroll();
+      setTimeout(() => {
+        isScrolling = true;
+      }, 500);
+    };
+
+    startAutoScroll();
+
+    carousel.addEventListener("mousedown", handleUserInteraction);
+    carousel.addEventListener("wheel", handleUserInteraction);
+    carousel.addEventListener("touchstart", handleUserInteraction);
+  } else {
+    console.log('Not in Scroll mode')
+  }
+</script>
+
+<style>
+  /* 自定义滚动条样式 */
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 8px;
+  }
+  .scrollbar-thumb-gray-400::-webkit-scrollbar-thumb {
+    background-color: #a0aec0;
+    border-radius: 4px;
+  }
+</style>
+
+<style is:global>
+  * {
+    scrollbar-color: var(--color-button-muted) var(--color-fill);
+  }
+
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
+  main {
+    margin: auto;
+    width: 100%;
+  }
+
+  @keyframes slide-enter {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .slide-enter,
+    .slide-enter-content > *:not(:has(.table-of-contents)) {
+      --enter-stage: 0;
+      --enter-step: 400ms;
+      --enter-initial: 0ms;
+      animation: slide-enter 1s both 1;
+      animation-delay: calc(
+        var(--enter-initial) + var(--enter-stage) * var(--enter-step)
+      );
+    }
+
+    .slide-enter-content > *:nth-child(1) {
+      --enter-stage: 1 !important;
+    }
+    .slide-enter-content > *:nth-child(2) {
+      --enter-stage: 2 !important;
+    }
+    .slide-enter-content > *:nth-child(3) {
+      --enter-stage: 3 !important;
+    }
+    .slide-enter-content > *:nth-child(4) {
+      --enter-stage: 4 !important;
+    }
+    .slide-enter-content > *:nth-child(5) {
+      --enter-stage: 5 !important;
+    }
+    .slide-enter-content > *:nth-child(6) {
+      --enter-stage: 6 !important;
+    }
+    .slide-enter-content > *:nth-child(7) {
+      --enter-stage: 7 !important;
+    }
+    .slide-enter-content > *:nth-child(8) {
+      --enter-stage: 8 !important;
+    }
+    .slide-enter-content > *:nth-child(9) {
+      --enter-stage: 9 !important;
+    }
+    .slide-enter-content > *:nth-child(10) {
+      --enter-stage: 10 !important;
+    }
+    .slide-enter-content > *:nth-child(11) {
+      --enter-stage: 11 !important;
+    }
+    .slide-enter-content > *:nth-child(12) {
+      --enter-stage: 12 !important;
+    }
+    .slide-enter-content > *:nth-child(13) {
+      --enter-stage: 13 !important;
+    }
+    .slide-enter-content > *:nth-child(14) {
+      --enter-stage: 14 !important;
+    }
+    .slide-enter-content > *:nth-child(15) {
+      --enter-stage: 15 !important;
+    }
+    .slide-enter-content > *:nth-child(16) {
+      --enter-stage: 16 !important;
+    }
+    .slide-enter-content > *:nth-child(17) {
+      --enter-stage: 17 !important;
+    }
+    .slide-enter-content > *:nth-child(18) {
+      --enter-stage: 18 !important;
+    }
+    .slide-enter-content > *:nth-child(19) {
+      --enter-stage: 19 !important;
+    }
+    .slide-enter-content > *:nth-child(20) {
+      --enter-stage: 20 !important;
+    }
+  }
+</style>
+

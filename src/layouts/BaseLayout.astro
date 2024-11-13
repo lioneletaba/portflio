@@ -3,6 +3,7 @@ import BaseHead from './components/BaseHead.astro';
 import Header from './components/Header.astro';
 import Footer from './components/Footer.astro';
 import { loadEnv } from 'vite';
+import ArtPlums from '@src/components/ArtPlums.astro';
 
 const { GTAG_MEASUREMENT_ID } = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
 const { title, description, image } = Astro.props;
@@ -13,13 +14,24 @@ const { title, description, image } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} image={image} />
 	</head>
-	<body
-		class="bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0"
-	>
+
+  <body class="relative bg-skin-fill font-sans">
 		<Header/>
+    <div class="absolute top-0 -z-10 h-full w-full print:hidden">
+      <div
+        class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%]
+        translate-y-[20%] rounded-full bg-skin-hue/10 blur-[80px] invert-0 dark:bg-white/5"
+      >
+      </div>
+    </div>
+    <ArtPlums />
 		<div class='py-8 min-h-[calc(100vh-160px)]'>
 			<slot />
 		</div>
+    <!-- <slot /> -->
+	<!-- <body -->
+	<!-- 	class="bg-white dark:bg-zinc-900 dark:text-zinc-100 pt-16 sm:pt-0" -->
+	<!-- > -->
 		<Footer />
 		<!-- Google tag (gtag.js) -->
     {

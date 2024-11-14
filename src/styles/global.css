@@ -3,11 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-	pre,
-	code {
-		font-size: 0.875rem;
-	}
+
+  pre,
+  code {
+    font-size: 0.875rem;
+  }
+
   :root {
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+
     --color-text-base: 0, 0, 0;
     --color-text-muted: 120, 120, 120;
     --color-text-inverted: 255, 255, 255;

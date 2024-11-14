@@ -1,13 +1,8 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { Image } from 'astro:assets';
-import AvaLogo from '@src/assets/img/small-ava.jpg';
-import GithubWhite from '@src/assets/img/github-mark-white.svg';
-import GithubBlack from '@src/assets/img/github-mark.svg';
-
 
 const menu = [
-  {
+	{
 		link: '/about/',
 		label: 'About'
 	},
@@ -22,43 +17,56 @@ const menu = [
 	{
 		link: '#experience-section',
 		label: 'Experience'
-	},
+	}
 ];
 ---
 
 <header
 	id='site-header'
-	class:list={[
-		'flex fixed top-1 items-center w-full transition duration-300 z-[999] border-[var(--soft-border-color)]'
-	]}
+	class:list={['flex fixed top-1 items-center w-full transition duration-300 z-[999] border-[var(--soft-border-color)]']}
 >
 	<div class='container bg-transparent'>
 		<nav class='flex gap-4 items-center justify-between py-3'>
-			<h2 class='m-0'>
-				<a href='/' class='flex gap-4 items-center text-xl font-black uppercase'>
-          <Image src={AvaLogo} alt='Lionel Etaba Portfolio' class="rounded-full w-11 border-white border-2 shadow-lg"/> 
-				</a>
+			<h2 class='m-0 opacity-0 pointer-events-none'>
+				<a href='' class='flex gap-4 items-center text-xl font-black uppercase'> </a>
 			</h2>
 
-      <div class='w-auto max-w-full px-3 z-[999]'>
-        <div style={{boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)"}} class="flex px-2.5 bg-white/10 backdrop-blur-md leading-tight rounded-full border dark:border-skin-fill">
-          <div class="px-2.5 text-sm">
-            <HeaderLink class="py-3 flex items-center" href="/" aria-label="Home">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            </HeaderLink>
-          </div>
-          {
-            menu.map((item) => (
-              <div class='px-2.5 text-sm'>
-                <HeaderLink class="py-3 flex items-center" href={item.link}>
-                  {item.label}
-                </HeaderLink>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-			<div class='flex '>
+			<div class='w-auto max-w-full px-3 z-[999]'>
+				<div
+					style={{ boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)' }}
+					class='flex px-2.5 bg-white/10 backdrop-blur-md leading-tight rounded-full border dark:border-skin-fill'
+				>
+					<div class='px-2.5 text-sm'>
+						<HeaderLink class='py-3 flex items-center' href='/' aria-label='Home'>
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								width='20'
+								height='20'
+								viewBox='0 0 24 24'
+								fill='none'
+								stroke='currentColor'
+								stroke-width='1.7'
+								stroke-linecap='round'
+								stroke-linejoin='round'
+								class='lucide lucide-house'
+								><path d='M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8'></path><path
+									d='M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'
+								></path></svg
+							>
+						</HeaderLink>
+					</div>
+					{
+						menu.map((item) => (
+							<div class='px-2.5 text-sm'>
+								<HeaderLink class='py-3 flex items-center' href={item.link}>
+									{item.label}
+								</HeaderLink>
+							</div>
+						))
+					}
+				</div>
+			</div>
+			<div class='flex'>
 				<button class='p-3' id='themeToggle' aria-label='Theme mode'>
 					<svg
 						class='sun'

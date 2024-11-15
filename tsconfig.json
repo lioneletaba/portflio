@@ -3,11 +3,24 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "baseUrl": ".",
-		"paths": {
-			"@src/*": ["src/*"],
-			"@components/*": ["src/components/*"]
-		},
-    "outDir": "dist"
-	},
-  "exclude": ["public", "node_modules", "dist"]
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ]
+    },
+    "outDir": "dist",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
+  "exclude": [
+    "public",
+    "node_modules",
+    "dist"
+  ]
 }

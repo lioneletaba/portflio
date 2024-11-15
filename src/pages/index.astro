@@ -1,20 +1,17 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 // import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 // import Ava from '@src/assets/img/ava.jpg';
-import { projects } from './projects/projects';
-
 import About from '@src/components/sections/About.astro';
 import Experience from '@src/components/sections/Experience.astro';
 import Hero from '@src/components/sections/Hero.astro';
 import Projects from '@src/components/sections/Projects.astro';
 import Skills from '@src/components/sections/Skills.astro';
-import Tail from '@src/components/sections/Tail.astro';
 import KeyboardManager from '@src/components/KeyboardManager.astro';
 import ThemeSwitch from '@src/components/ThemeSwitch.astro';
+import { ActionButton } from '@src/components/ui/ActionButton';
 
 type BlogPost = CollectionEntry<'blog'>;
 ---
@@ -28,6 +25,7 @@ type BlogPost = CollectionEntry<'blog'>;
 				<Hero />
 				<About />
 				<ThemeSwitch />
+				<ActionButton client:only='react' />
 			</div>
 		</div>
 		<div class='slide-enter-content space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0'>
@@ -36,7 +34,6 @@ type BlogPost = CollectionEntry<'blog'>;
 			<Skills className='print:hidden' />
 		</div>
 	</main>
-	<!-- <Tail /> -->
 	<KeyboardManager />
 </BaseLayout>
 

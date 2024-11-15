@@ -8,7 +8,7 @@ export const CV = {
     "email": "etabalionel@gmail.com",
     "url": "https://lioneletaba.dev",
     "summary":
-      "Born in 2010, I primarily work with TypeScript and JavaScript for full-stack development, and enjoy working with various technologies.",
+      "With over five 6 of experience, I specialize in crafting scalable web applications, building efficient APIs, and optimizing systems performance. Experienced in both backend and frontend development, along with managing infrastructure and CI/CD.",
     "theme": "blue",
     "location": {
       "address": "",

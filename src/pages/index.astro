@@ -25,7 +25,9 @@ type BlogPost = CollectionEntry<'blog'>;
 				<Hero />
 				<About />
 				<ThemeSwitch />
-				<ActionButton client:only='react' />
+				<div class='mt-4'>
+					<ActionButton client:only='react' />
+				</div>
 			</div>
 		</div>
 		<div class='slide-enter-content space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0'>

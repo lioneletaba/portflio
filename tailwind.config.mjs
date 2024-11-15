@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import defaultTheme from "tailwindcss/defaultTheme";
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue !== undefined) {
@@ -21,7 +23,20 @@ export const theme = {
       "2xl": "1400px",
     },
   },
+  fontFamily: {
+    display: ['"Gilda Display"', "sans-serif"],
+    jakarta: ['"Plus Jakarta Sans"', "sans-serif"],
+    manrope: ["Manrope", "sans-serif"],
+  },
   extend: {
+    fontFamily: {
+      sans: [
+        "Manrope",
+        '"Plus Jakarta Sans"',
+        "sans-serif",
+        ...defaultTheme.fontFamily.sans,
+      ],
+    },
     textColor: {
       skin: {
         base: withOpacity("--color-text-base"),

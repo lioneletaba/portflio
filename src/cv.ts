@@ -371,7 +371,8 @@ export const CV = {
   "references": [],
   "projects": [
     {
-      "name": "Cloudflare Vmail",
+      "name": "ClickID/CrediScan",
+      "github": "",
       "image": {
         "url":
           "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
@@ -379,17 +380,24 @@ export const CV = {
         "dark":
           "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp",
       },
+      "images": [
+        "/clickid_commercial.jpg",
+        "/clickid_home.jpg",
+        "/clickid_landing.png",
+        "/clickid_landing_2.png",
+        "/clickid_landing_3.png",
+        "/clickid_landing_4.png",
+      ],
       "isActive": true,
       "description":
-        "An open source temporary email tool, fully on Cloudflare. Inspired by oiov/vmail",
+        "A software as a service designed to generate financial and judiciary reports on individuals and companies in Canada(Quebec)",
       "highlights": [
         "🎯 Privacy-friendly, no registration required, out-of-the-box",
         "✨ Support saving passwords and retrieving email addresses",
         "😄 Support multiple domain name suffixes",
         "🚀 100% open source, fully based on Cloudflare.",
       ],
-      "url": "https://what-the-fuck.sbs",
-      "github": "https://github.com/MiraHikari/cloudflare-vmail",
+      "url": "https://identitequebec.ca/crediscan",
     },
     {
       "name": "Riddle Town Hunt 2",

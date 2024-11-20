@@ -66,6 +66,7 @@ export const theme = {
       skin: {
         hue: withOpacity("--color"),
         muted: withOpacity("--muted"),
+        fill: withOpacity("--color-fill"),
       },
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",

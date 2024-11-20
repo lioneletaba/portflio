@@ -89,6 +89,7 @@
     --color-button-accent: 249, 115, 22;
     --color-button-accent-hover: 55, 55, 55;
     --color-button-muted: 244, 239, 238;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
 
     [data-theme="blue"] {
       --color-text-base: 15, 23, 42;
@@ -100,6 +101,8 @@
       --color-button-accent: 59, 130, 246;
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 226, 232, 240;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="red"] {
@@ -112,6 +115,8 @@
       --color-button-accent: 239, 68, 68;
       --color-button-accent-hover: 220, 50, 70;
       --color-button-muted: 245, 245, 245;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="green"] {
@@ -124,6 +129,8 @@
       --color-button-accent: 101, 163, 13;
       --color-button-accent-hover: 120, 220, 120;
       --color-button-muted: 211, 235, 173;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="cyber"] {
@@ -136,6 +143,8 @@
       --color-button-accent: 235, 21, 43;
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 249, 239, 6;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="pink"] {
@@ -153,6 +162,8 @@
       --color-button-accent-hover: 194, 24, 91;
       /* Material Design Pink 700 */
       --color-button-muted: 255, 240, 245;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
   }
 
@@ -166,6 +177,7 @@
     --color-button-accent: 227, 77, 10;
     --color-button-accent-hover: 231, 121, 43;
     --color-button-muted: 26, 26, 26;
+    --swiper-pagination-bullet-inactive-opacity: 1;
 
     [data-theme="blue"] {
       --color-text-base: 248, 250, 252;
@@ -177,6 +189,8 @@
       --color-button-accent: 59, 130, 246;
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 30, 41, 59;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="red"] {
@@ -189,6 +203,8 @@
       --color-button-accent: 248, 113, 113;
       --color-button-accent-hover: 220, 50, 70;
       --color-button-muted: 120, 113, 108;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="green"] {
@@ -201,6 +217,8 @@
       --color-button-accent: 132, 204, 22;
       --color-button-accent-hover: 120, 220, 120;
       --color-button-muted: 34, 44, 34;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="cyber"] {
@@ -213,6 +231,8 @@
       --color-button-accent: 90, 237, 251;
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 25, 81, 86;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
 
     [data-theme="pink"] {
@@ -225,18 +245,35 @@
       --color-button-accent: 255, 105, 180;
       --color-button-accent-hover: 255, 182, 193;
       --color-button-muted: 255, 240, 245;
+      --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+      --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
     }
   }
 }
 
 
+@layer components {
 
+  .accent-overlay {
+    position: relative;
+  }
 
-/* @layer base { */
-/*   * { */
-/*     @apply border-border; */
-/*   } */
-/*   body { */
-/*     @apply bg-background text-foreground; */
-/*   } */
-/* } */
+  .accent-overlay {
+    filter: saturate(0);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .accent-overlay:hover {
+    filter: unset;
+  }
+
+  /* .swiper-pagination-bullet { */
+  /*   background-color: rgba(var(--color-button-accent)); */
+  /*   background-color: blue !important; */
+  /* } */
+  /**/
+  /* .swiper-pagination-bullet-active { */
+  /*   background-color: red !important; */
+  /* } */
+
+}

@@ -81,70 +81,160 @@ export const CV = {
   ],
   "work": [
     {
-      "name": "Sgguo Development Team",
-      "position": "Full-stack Developer",
+      "name": "Seminar community",
+      "position": "Sofware engineering consultant",
       "location_type": "Remote",
-      "location": "CN",
-      "url": "https://github.com/Sgguo-Development-Team",
-      "startDate": "2022-06-01",
+      "location": "USA",
+      "url": "https://seminar.community",
+      "startDate": "2024-08-01",
       "endDate": null,
-      "summary": "Developing high-availability full-stack projects.",
-      "highlights": [
-        "Enhanced internal workflow efficiency by 30%.",
-      ],
+      "summary":
+        "Seminar is an online platform for charter schools leaders in the USA.",
+      "highlights": [],
       "responsibilities": [
-        "Developed and maintained backend services using Node.js and Golang.",
+        "Lead all the engineering projects of the company",
       ],
       "achievements": [
-        "Implemented a cloud drive and verification code system.",
+        "Built a cron service to collect and store the platform's content.",
+        "Built a RAG (Retrieval Augmented Generation) pipeline for answering questions based on the platform's content.",
+        "Built the Chatbot user interface with NextJs.",
+        "Made several improvements to the company's website",
       ],
       "skills": {
-        "PHP": "simple-icons:php",
-        "Node": "ri:nodejs-line",
-        "Golang": "simple-icons:go",
+        "NodeJs": "ri:nodejs-line",
         "Next.js": "ri:nextjs-fill",
-        "React": "mdi:react",
-        "SQL": "simple-icons:mysql",
+        "ReactJs": "mdi:react",
         "Git": "mdi:git",
         "GitHub": "mdi:github",
-        "NestJS": "simple-icons:nestjs",
-        "Vue": "mdi:vuejs",
+        "AWS Lambda": "simple-icons:awslambda",
+        "Typescript": "simple-icons:typescript",
+        "Langchain": "simple-icons:langchain",
+        "OpenAI": "simple-icons:openai",
+        "PineconeDB": "mdi:database",
+        "SST": "simple-icons:sst",
       },
     },
     {
-      "name": "Riddle Town Team",
-      "position": "Full-stack Developer",
+      "name": "Kibo School",
+      "position": "Sofware engineer",
       "location_type": "Remote",
-      "location": "CN",
-      "url": "https://rth2.gcxstudio.cn",
-      "startDate": "2023-01-01",
-      "endDate": "2024-02-11",
-      "summary": "Led page design and account systems.",
-      "highlights": [
-        "Completed 95% of project content.",
-      ],
+      "location": "USA",
+      "url": "https://seminar.community",
+      "startDate": "2023-07-01",
+      "endDate": null,
+      "summary":
+        "Kibo School delivers accredited computer science degrees through an online program that combines quality education with practical experience.",
+      "highlights": [],
       "responsibilities": [
-        "Developed complete pages.",
-        "Integrated user-facing elements with server-side logic.",
+        "Designed and implemented core platform architecture.",
+        "Built internal APIs and third-party integrations.",
+        "Developed frontend interfaces using React and NextJS.",
+        "Managed database operations and migrations.",
+        "Set up CI/CD pipelines on Google Cloud Platform.",
       ],
       "achievements": [
-        "Ensured smooth project execution.",
+        "Built platform infrastructure.",
+        "Achieved 100% database integrity during migrations.",
+        "Streamlined deployment process with GitHub Actions.",
+        "Successfully launched platform MVP.",
       ],
       "skills": {
-        "HTML": "simple-icons:html5",
-        "CSS": "ri:css3-fill",
-        "JavaScript": "simple-icons:javascript",
-        "TypeScript": "simple-icons:typescript",
-        "Vite": "simple-icons:vite",
-        "Node": "ri:nodejs-line",
-        "Docker": "mdi:docker",
-        "WordPress": "ri:wordpress-fill",
-        "Astro": "simple-icons:astro",
-        "SQL": "simple-icons:mysql",
-        "Tailwind": "mdi:tailwind",
-        "React": "mdi:react",
-        "GitHub": "mdi:github",
+        "NodeJs": "ri:nodejs-line",
+        "Next.js": "ri:nextjs-fill",
+        "ReactJs": "mdi:react",
         "Git": "mdi:git",
+        "GitHub": "mdi:github",
+        "Github Actions": "simple-icons:githubactions",
+        "Typescript": "simple-icons:typescript",
+        "Python": "simple-icons:python",
+        "Flask": "simple-icons:flask",
+        "PostgreSQL": "simple-icons:postgresql",
+        "Google Cloud Platform": "simple-icons:googlecloud",
+        "Docker": "simple-icons:docker",
+        "Docker compose": "simple-icons:docker",
+      },
+    },
+    {
+      "name": "Djemo Digital",
+      "position": "Lead Sofware Developer",
+      "location_type": "Hybrid",
+      "location": "Yaounde, Cameroon",
+      "url": "https://djemobtp.org/site",
+      "startDate": "2021-07-01",
+      "endDate": "2023-07-01",
+      "summary":
+        "Djemo Digital develops a platform helping Central African construction companies streamline project management and resource tracking.",
+      "highlights": [],
+      "responsibilities": [
+        "Led the technical design and architecture decisions",
+        "Developed serverless APIs using AWS Lambda",
+        "Built the user interfaces using ReactJs",
+        "Managed the development team and processes",
+      ],
+      "achievements": [
+        "Successfully launched the application that is now used by several companies.",
+        "Implemented an efficient MongoDB architecture.",
+        "Established an effective code review process.",
+      ],
+      "skills": {
+        "NodeJs": "ri:nodejs-line",
+        "ReactJs": "mdi:react",
+        "Git": "mdi:git",
+        "Typescript": "simple-icons:typescript",
+        "AWS Lambda": "simple-icons:awslambda",
+        "AWS SQS": "simple-icons:amazonsqs",
+        "AWS S3": "simple-icons:amazons3",
+        "AWS": "simple-icons:amazonaws",
+        "MongoDB": "simple-icons:mongodb",
+        "Serverless Framework": "simple-icons:serverless",
+        "Bitbucket": "simple-icons:bitbucket",
+      },
+    },
+    {
+      "name": "Bara Technologies",
+      "position": "Full-stack Sofware Developer",
+      "location_type": "Remote",
+      "location": "Canada",
+      "url": "https://identitequebec.ca/",
+      "startDate": "2018-02-01",
+      "endDate": "2021-06-28",
+      "summary":
+        "A technology company focused on building SAAS products for businesses in the financial sector.",
+      "highlights": [],
+      "responsibilities": [
+        "Designed scalable PostgreSQL databases",
+        "Built REST and GraphQL APIs using Python(Flask, FastAPI) and NodeJs",
+        "Developed React frontend interfaces using ReactJs",
+        "Managed cloud infrastructure on Google Cloud Platform and AWS",
+        "Set up development environments using Docker",
+      ],
+      "achievements": [
+        "Scaled applications to 1,000+ monthly active users.",
+        "Cut deployment time by 50% with Jenkins.",
+        "Successfully setup a payment system using Stripe",
+        "Successfully integrated multiple third-party services (ZohoCRM, Flinks, SoquijAPI).",
+        "Optimized development workflow with Docker and Docker-compose.",
+      ],
+      "skills": {
+        "NodeJs": "ri:nodejs-line",
+        "ReactJs": "mdi:react",
+        "Git": "mdi:git",
+        "Javascript": "simple-icons:javascript",
+        "Typescript": "simple-icons:typescript",
+        "AWS S3": "simple-icons:amazons3",
+        "AWS": "simple-icons:amazonaws",
+        "Celery": "simple-icons:celery",
+        "Redis": "simple-icons:redis",
+        "PostgreSQL": "simple-icons:postgresql",
+        "Gitlab": "simple-icons:gitlab",
+        "Python": "simple-icons:python",
+        "Flask": "simple-icons:flask",
+        "FastAPI": "simple-icons:fastapi",
+        "Google Cloud Platform": "simple-icons:googlecloud",
+        "Docker": "simple-icons:docker",
+        "Docker compose": "simple-icons:docker",
+        "Kubernetes": "simple-icons:kubernetes",
+        "Jenkins": "simple-icons:jenkins",
       },
     },
   ],
@@ -152,7 +242,6 @@ export const CV = {
     {
       "name": "HTML",
       "icon": "simple-icons:html5",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -161,7 +250,6 @@ export const CV = {
     {
       "name": "CSS",
       "icon": "ri:css3-fill",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -171,7 +259,6 @@ export const CV = {
     {
       "name": "JavaScript",
       "icon": "simple-icons:javascript",
-      "level": "Expert",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -180,9 +267,8 @@ export const CV = {
       ],
     },
     {
-      "name": "Tailwind",
+      "name": "TailwindCSS",
       "icon": "mdi:tailwind",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -193,7 +279,6 @@ export const CV = {
     {
       "name": "TypeScript",
       "icon": "simple-icons:typescript",
-      "level": "Expert",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -202,9 +287,8 @@ export const CV = {
       ],
     },
     {
-      "name": "Node",
+      "name": "NodeJs",
       "icon": "ri:nodejs-line",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Backend",
@@ -215,7 +299,6 @@ export const CV = {
     {
       "name": "SQL",
       "icon": "simple-icons:mysql",
-      "level": "Intermediate",
       "keywords": [
         "Databases",
         "SQL",
@@ -226,7 +309,6 @@ export const CV = {
     {
       "name": "MongoDB",
       "icon": "simple-icons:mongodb",
-      "level": "Intermediate",
       "keywords": [
         "Databases",
         "File",
@@ -247,7 +329,6 @@ export const CV = {
     {
       "name": "GitHub",
       "icon": "mdi:github",
-      "level": "Expert",
       "keywords": [
         "Version Control",
         "Collaboration",
@@ -258,7 +339,6 @@ export const CV = {
     {
       "name": "Next.js",
       "icon": "ri:nextjs-line",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -268,20 +348,8 @@ export const CV = {
       ],
     },
     {
-      "name": "React",
+      "name": "ReactJs",
       "icon": "mdi:react",
-      "level": "Expert",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI",
-      ],
-    },
-    {
-      "name": "Vue",
-      "icon": "mdi:vuejs",
-      "level": "Intermediate",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -292,60 +360,65 @@ export const CV = {
     {
       "name": "Docker",
       "icon": "mdi:docker",
-      "level": "Intermediate",
       "keywords": [
         "Virtual Environments",
         "Backend",
       ],
     },
     {
-      "name": "NestJS",
-      "icon": "simple-icons:nestjs",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "IOC",
-      ],
-    },
-    {
-      "name": "Vite",
-      "icon": "simple-icons:vite",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Build Tool",
-      ],
-    },
-    {
-      "name": "WordPress",
-      "icon": "ri:wordpress-fill",
-      "level": "Intermediate",
-      "keywords": [
-        "PHP",
-        "Fullstack",
-        "Frontend",
-      ],
-    },
-    {
       "name": "Golang",
       "icon": "simple-icons:go",
-      "level": "Beginner",
       "keywords": [
         "Backend",
-        "Cloud Service",
       ],
     },
     {
-      "name": "Astro",
-      "icon": "simple-icons:astro",
-      "level": "Intermediate",
+      "name": "Python",
+      "icon": "simple-icons:python",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "SSR",
-        "Static Generation",
+        "Backend",
+      ],
+    },
+    {
+      "name": "Flask",
+      "icon": "simple-icons:flask",
+      "keywords": [
+        "Backend",
+      ],
+    },
+    {
+      "name": "FastAPI",
+      "icon": "simple-icons:fastapi",
+      "keywords": [
+        "Backend",
+      ],
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "simple-icons:postgresql",
+      "keywords": [
+        "Backend",
+      ],
+    },
+    {
+      "name": "AWS",
+      "icon": "simple-icons:amazonaws",
+      "keywords": [
+        "backend",
+      ],
+    },
+    {
+      "name": "Google Cloud Platform",
+      "icon": "simple-icons:googlecloud",
+      "keywords": [
+        "backend",
+      ],
+    },
+    {
+      "name": "GitHub Actions",
+      "icon": "simple-icons:githubactions",
+      "keywords": [
+        "CI/CD",
       ],
     },
   ],
@@ -371,6 +444,58 @@ export const CV = {
   "references": [],
   "projects": [
     {
+      "name": "Seminar AI Chatbot",
+      "github": "",
+      "image": {
+        "url":
+          "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
+        "position": "container",
+        "dark":
+          "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp",
+      },
+      "images": [
+        "/seminar_chat_embeded.png",
+        "/seminar_chat_preview_dark.png",
+        "/seminar_chat_preview_light.png",
+      ],
+      "isActive": true,
+      "description": "The AI chatbot of the Seminar platform.",
+      "highlights": [
+        "Built a cron service to collect and store the platform's content.",
+        "Built a RAG (Retrieval Augmented Generation) pipeline for answering questions based on the platform's content.",
+        "Built the Chatbot user interface with NextJs.",
+      ],
+      "url": "https://seminar.community",
+    },
+    {
+      "name": "Anchor",
+      "github": "",
+      "image": {
+        "url":
+          "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
+        "position": "container",
+        "dark":
+          "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp",
+      },
+      "images": [
+        "/anchor_unit.png",
+        "/anchor_ai_module.jpeg",
+        "/anchor_cnns.png",
+        "/anchor_csp.png",
+        "/anchor_csp_2.png",
+        "/anchor_home.png",
+      ],
+      "isActive": true,
+      "description": "The online learning platform of Kibo School.",
+      "highlights": [
+        "Designed the architecture of the application.",
+        "Setup continuous integration and continuous deployment pipelines on AWS.",
+        "Led a team of four developers during the development.",
+        "Built API services and user interfaces.",
+      ],
+      "url": "https://kibo.school/about-kibo",
+    },
+    {
       "name": "ClickID/CrediScan",
       "github": "",
       "image": {
@@ -390,31 +515,38 @@ export const CV = {
       ],
       "isActive": true,
       "description":
-        "A software as a service designed to generate financial and judiciary reports on individuals and companies in Canada(Quebec)",
+        "A SaaS platform generating financial and legal reports on individuals and companies in Quebec, Canada.",
       "highlights": [
-        "🎯 Privacy-friendly, no registration required, out-of-the-box",
-        "✨ Support saving passwords and retrieving email addresses",
-        "😄 Support multiple domain name suffixes",
-        "🚀 100% open source, fully based on Cloudflare.",
+        "Streamlined development and CI/CD with docker, docker-compose, Jenkins and Google Cloud Platform.",
+        "Third party APIs and services integration (ZohoCRM, Stripe).",
+        "Built the application dashboard with ReactJs.",
+        "Built many financial and judiciary data collection services.",
       ],
       "url": "https://identitequebec.ca/crediscan",
     },
     {
-      "name": "Riddle Town Hunt 2",
+      "name": "Promethee",
+      "github": "",
       "image": {
         "url":
-          "https://rth2-webstatic.gbclstudio.cn/wp-content/uploads/2024/02/1707656250-76b2b0d2c94824e89a2b8b2c7d1c6afe.png",
-        "position": "background",
+          "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
+        "position": "container",
+        "dark":
+          "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp",
       },
-      "isActive": true,
-      "description": "Public decryption activity in the form of Puzzle Hunt.",
-      "highlights": [
-        "👌 More than 1000 people participated, system runs normally",
-        "😮‍ Use headless CMS: WordPress to storage and manage contents, dynamically render page",
-        "😊 Windows-like interface",
-        "💕 Based on Astro",
+      "images": [
+        "/ingeapps.png",
       ],
-      "url": "https://rth2.gcxstudio.cn/",
+      "isActive": true,
+      "description":
+        "A SaaS solution tracking construction project resources from start to finish.",
+      "highlights": [
+        "Designed the architecture of the application.",
+        "Setup continuous integration and continuous deployment pipelines on AWS.",
+        "Led a team of four developers during the development.",
+        "Built API services and user interfaces.",
+      ],
+      "url": "https://djemobtp.org/site",
     },
   ],
 };

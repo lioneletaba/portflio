@@ -51,12 +51,12 @@ const projects = CV.projects;
 						</div>
 
 						<p class={`relative z-10 py-3 text-sm text-skin-base`}>{description}</p>
-						<ul class={`relative z-10 mt-1 text-sm text-skin-inverted`}>
+						<ul class={`relative z-10 mt-1 mb-5 text-sm text-skin-inverted`}>
 							{highlights.map((highlight) => {
 								return <li>{highlight}</li>;
 							})}
 						</ul>
-						<div class='h-56 mt-5 sm:h-52 rounded-md accent-overlay overflow-hidden'>
+						<div class='h-56 sm:h-52 mt-auto rounded-md accent-overlay overflow-hidden'>
 							<ProjectImagesSlider images={images} client:only='react' />
 						</div>
 					</div>

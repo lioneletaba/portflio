@@ -381,11 +381,11 @@ export const CV = {
           "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp",
       },
       "images": [
+        "/clickid_landing_3.png",
         "/clickid_commercial.jpg",
         "/clickid_home.jpg",
         "/clickid_landing.png",
         "/clickid_landing_2.png",
-        "/clickid_landing_3.png",
         "/clickid_landing_4.png",
       ],
       "isActive": true,

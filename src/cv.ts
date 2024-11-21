@@ -413,6 +413,16 @@ export const CV = {
       ],
     },
     {
+      "name": "SQL",
+      "icon": "simple-icons:mysql",
+      "keywords": [
+        "Databases",
+        "SQL",
+        "Data Storage",
+        "Backend",
+      ],
+    },
+    {
       "name": "PostgreSQL",
       "icon": "simple-icons:postgresql",
       "keywords": [
@@ -425,6 +435,14 @@ export const CV = {
       "keywords": [
         "Databases",
         "File",
+        "Data Storage",
+        "Backend",
+      ],
+    },
+    {
+      "name": "Redis",
+      "icon": "simple-icons:redis",
+      "keywords": [
         "Data Storage",
         "Backend",
       ],
@@ -459,10 +477,31 @@ export const CV = {
       ],
     },
     {
+      "name": "Jenkins",
+      "icon": "simple-icons:jenkins",
+      "keywords": [
+        "CI/CD",
+      ],
+    },
+    {
       "name": "GitHub Actions",
       "icon": "simple-icons:githubactions",
       "keywords": [
         "CI/CD",
+      ],
+    },
+    {
+      "name": "SST",
+      "icon": "simple-icons:sst",
+      "keywords": [
+        "CI/CD",
+      ],
+    },
+    {
+      "name": "OpenAI",
+      "icon": "simple-icons:openai",
+      "keywords": [
+        "AI",
       ],
     },
   ],

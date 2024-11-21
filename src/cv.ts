@@ -121,7 +121,7 @@ export const CV = {
       "location": "USA",
       "url": "https://seminar.community",
       "startDate": "2023-07-01",
-      "endDate": null,
+      "endDate": "2024-07-30",
       "summary":
         "Kibo School delivers accredited computer science degrees through an online program that combines quality education with practical experience.",
       "highlights": [],
@@ -152,6 +152,40 @@ export const CV = {
         "Google Cloud Platform": "simple-icons:googlecloud",
         "Docker": "simple-icons:docker",
         "Docker compose": "simple-icons:docker",
+      },
+    },
+    {
+      "name": "Mboa Digital",
+      "position": "Senior software engineering consultant",
+      "location_type": "Hybrid",
+      "location": "Yaounde, Cameroon",
+      "url": "https://mboadigital.tech/home",
+      "startDate": "2023-05-01",
+      "endDate": "2023-08-30",
+      "summary":
+        "A digital services company specializing in enterprise software solutions for medium and large-scale businesses accross Central Africa and Europe.",
+      "highlights": [],
+      "responsibilities": [
+        "Maintained existing and built new REST services.",
+        "Modified database functions and stored procedures.",
+        "Implemented application features.",
+        "Performed code reviews and bug fixes.",
+      ],
+      "achievements": [
+        "Enhanced query performance through optimized SQL procedures.",
+        "Implemented a search functionality for a warehouse management application.",
+        "Streamlined data model for better efficiency.",
+        "Reduced several services response times.",
+      ],
+      "skills": {
+        "Git": "mdi:git",
+        "Javascript": "simple-icons:javascript",
+        "Typescript": "simple-icons:typescript",
+        "Angular": "mdi:angular",
+        "Java": "mdi:language-java",
+        "C#(Csharp)": "mdi:language-csharp",
+        "Docker": "simple-icons:docker",
+        "OracleDB": "simple-icons:postgresql",
       },
     },
     {
@@ -257,16 +291,6 @@ export const CV = {
       ],
     },
     {
-      "name": "JavaScript",
-      "icon": "simple-icons:javascript",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack",
-      ],
-    },
-    {
       "name": "TailwindCSS",
       "icon": "mdi:tailwind",
       "keywords": [
@@ -274,6 +298,16 @@ export const CV = {
         "Frontend",
         "CSS Framework",
         "Responsive Design",
+      ],
+    },
+    {
+      "name": "JavaScript",
+      "icon": "simple-icons:javascript",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "Fullstack",
       ],
     },
     {
@@ -287,6 +321,16 @@ export const CV = {
       ],
     },
     {
+      "name": "ReactJs",
+      "icon": "mdi:react",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "JavaScript Library",
+        "UI",
+      ],
+    },
+    {
       "name": "NodeJs",
       "icon": "ri:nodejs-line",
       "keywords": [
@@ -294,26 +338,6 @@ export const CV = {
         "Backend",
         "JavaScript",
         "Server",
-      ],
-    },
-    {
-      "name": "SQL",
-      "icon": "simple-icons:mysql",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend",
-      ],
-    },
-    {
-      "name": "MongoDB",
-      "icon": "simple-icons:mongodb",
-      "keywords": [
-        "Databases",
-        "File",
-        "Data Storage",
-        "Backend",
       ],
     },
     {
@@ -337,38 +361,12 @@ export const CV = {
       ],
     },
     {
-      "name": "Next.js",
-      "icon": "ri:nextjs-line",
+      "name": "SQL",
+      "icon": "simple-icons:mysql",
       "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation",
-      ],
-    },
-    {
-      "name": "ReactJs",
-      "icon": "mdi:react",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI",
-      ],
-    },
-    {
-      "name": "Docker",
-      "icon": "mdi:docker",
-      "keywords": [
-        "Virtual Environments",
-        "Backend",
-      ],
-    },
-    {
-      "name": "Golang",
-      "icon": "simple-icons:go",
-      "keywords": [
+        "Databases",
+        "SQL",
+        "Data Storage",
         "Backend",
       ],
     },
@@ -394,9 +392,55 @@ export const CV = {
       ],
     },
     {
+      "name": "Golang",
+      "icon": "simple-icons:go",
+      "keywords": [
+        "Backend",
+      ],
+    },
+    {
+      "name": "Java",
+      "icon": "mdi:language-java",
+      "keywords": [
+        "Backend",
+      ],
+    },
+    {
+      "name": "Csharp",
+      "icon": "mdi:language-csharp",
+      "keywords": [
+        "Backend",
+      ],
+    },
+    {
       "name": "PostgreSQL",
       "icon": "simple-icons:postgresql",
       "keywords": [
+        "Backend",
+      ],
+    },
+    {
+      "name": "MongoDB",
+      "icon": "simple-icons:mongodb",
+      "keywords": [
+        "Databases",
+        "File",
+        "Data Storage",
+        "Backend",
+      ],
+    },
+    {
+      "name": "Celery",
+      "icon": "simple-icons:celery",
+      "keywords": [
+        "Backend",
+      ],
+    },
+    {
+      "name": "Docker",
+      "icon": "mdi:docker",
+      "keywords": [
+        "Virtual Environments",
         "Backend",
       ],
     },

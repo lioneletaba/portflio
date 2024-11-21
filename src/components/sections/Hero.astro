@@ -4,8 +4,7 @@ import Section from '@src/components/Section.astro';
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
 
-const { name, label, image, location, profiles, email } = CV.basics;
-const { city, region, address } = location;
+const { name, label, image, profiles } = CV.basics;
 ---
 
 <Section>
@@ -13,21 +12,7 @@ const { city, region, address } = location;
 		<div class='info'>
 			<h1 class='font-display'>{name}</h1>
 			<h2 class='dev-title'>{label}</h2>
-			<!-- <div class='flex items-center gap-2 pt-2 text-sm text-skin-muted'> -->
-			<!--   <Icon class='print:hidden' name='mdi:world' width={20} height={20} /> -->
-			<!--   {address}, {city}, {region} -->
-			<!-- </div> -->
-			<!-- <footer class='print'> -->
-			<!-- 	{email} -->
-			<!-- </footer> -->
 			<footer class='print:hidden'>
-				{
-					email && (
-						<a href={`mailto:${email}`} title={`Send email to me`} target='_blank' rel='noopener noreferrer'>
-							<Icon class='print:hidden' name='mdi:email' width={20} height={20} />
-						</a>
-					)
-				}
 				{
 					profiles.map(({ network, url, icon }) => {
 						return (

@@ -19,7 +19,7 @@ export const CV = {
     "profiles": [
       {
         "network": "Linkedin",
-        "icon": "ri:bilibili-line",
+        "icon": "mdi:linkedin",
         "username": "lioneletaba",
         "url": "https://linkedin.com/lioneletaba",
       },
@@ -28,6 +28,12 @@ export const CV = {
         "icon": "mdi:github",
         "username": "lioneletaba",
         "url": "https://github.com/lioneletaba",
+      },
+      {
+        "network": "Personal",
+        "icon": "mdi:resume",
+        "url":
+          "https://app.enhancv.com/share/7f3826cd/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic",
       },
     ],
   },

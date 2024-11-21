@@ -8,14 +8,14 @@ const projects = CV.projects;
 ---
 
 <Section id='projects' className={Astro.props.className} title='Projects'>
-	<div class='grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col'>
+	<div class='grid grid-cols-1 gap-4 gap-y-8 md:grid-cols-2 print:flex print:flex-col'>
 		{
 			projects.map(({ url, description, highlights, github, name, isActive, images = [] }) => {
 				return (
 					<div
 						role='contentinfo'
 						class:list={[
-							'project-container grid-span-1 group ring-2 ring-skin-fill/10 relative flex backdrop-blur-md flex-col overflow-hidden rounded-md bg-white/10 p-5 shadow-md hover:shadow-lg transition-all shadow-skin-fill dark:shadow-white/10'
+							'project-container grid-span-1 group ring-2 ring-skin-fill/10 relative flex backdrop-blur-md flex-col overflow-hidden rounded-md bg-skin-muted/20 p-5 transition-all shadow-skin-fill dark:shadow-skin-muted/50'
 						]}>
 						<div class={`relative z-10 flex items-center justify-between space-x-[10px]`}>
 							<div class='flex items-center gap-2'>

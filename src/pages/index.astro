@@ -1,9 +1,6 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import BaseLayout from '../layouts/BaseLayout.astro';
-// import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
-// import Ava from '@src/assets/img/ava.jpg';
 import About from '@src/components/sections/About.astro';
 import Experience from '@src/components/sections/Experience.astro';
 import Hero from '@src/components/sections/Hero.astro';
@@ -12,8 +9,7 @@ import Skills from '@src/components/sections/Skills.astro';
 import KeyboardManager from '@src/components/KeyboardManager.astro';
 import ThemeSwitch from '@src/components/ThemeSwitch.astro';
 import { ActionButton } from '@src/components/ui/ActionButton';
-
-type BlogPost = CollectionEntry<'blog'>;
+import Posts from '@src/components/sections/Posts.astro';
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -33,6 +29,7 @@ type BlogPost = CollectionEntry<'blog'>;
 		<div class='slide-enter-content space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0'>
 			<Experience className='print:col-span-3' />
 			<Projects className='print:hidden' />
+			<Posts />
 			<Skills className='print:hidden' />
 		</div>
 	</main>

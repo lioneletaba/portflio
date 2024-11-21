@@ -9,7 +9,7 @@ export function ActionButton() {
         style={{ boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)" }}
         className=" text-inherit flex bg-white/10 backdrop-blur-md items-center space-x-2"
       >
-        <span>Let's work</span>
+        <span>Get in touch</span>
       </HoverBorderGradient>
     </div>
   );

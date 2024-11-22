@@ -19,12 +19,9 @@
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
-    "@fancyapps/ui": "^5.0.36",
     "@iconify-json/mdi": "^1.2.1",
     "@iconify-json/ri": "^1.2.3",
     "@iconify-json/simple-icons": "^1.2.11",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
     "astro": "^4.16.13",
     "astro-icon": "^1.1.2",
     "class-variance-authority": "^0.7.0",
@@ -46,6 +43,8 @@
     "@tailwindcss/typography": "^0.5.14",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "vite": "^5.4.11"
   }
 }

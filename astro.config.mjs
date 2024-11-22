@@ -46,10 +46,11 @@ export default defineConfig({
   markdown: {
     extendDefaultPlugins: true,
     rehypePlugins: [[autoNewTabExternalLinks, {
-      domain: "localhost:4321",
+      domain: "lioneletaba.dev",
     }]],
   },
 
   output: "server",
   adapter: cloudflare(),
 });
+

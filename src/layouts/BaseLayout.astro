@@ -3,7 +3,6 @@ import BaseHead from './components/BaseHead.astro';
 import Header from './components/Header.astro';
 import ArtPlums from '@src/components/ArtPlums.astro';
 
-const GTAG_MEASUREMENT_ID = import.meta.env.GTAG_MEASUREMENT_ID
 const { title, description, image } = Astro.props;
 ---
 
@@ -13,27 +12,11 @@ const { title, description, image } = Astro.props;
 		<BaseHead title={title} description={description} image={image} />
 	</head>
 
-  <body class="relative bg-skin-fill font-sans">
-		<Header/>
-    <ArtPlums />
+	<body class='relative bg-skin-fill font-sans'>
+		<Header />
+		<ArtPlums />
 		<div>
 			<slot />
 		</div>
-		<!-- Google tag (gtag.js) -->
-    {
-      GTAG_MEASUREMENT_ID &&
-      <>
-        <script type='text/partytown' async src={'https://www.googletagmanager.com/gtag/js?id=' + GTAG_MEASUREMENT_ID}></script>
-        <script type='text/partytown' define:vars={{ GTAG_MEASUREMENT_ID }}>
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-
-          gtag('config', GTAG_MEASUREMENT_ID);
-        </script>
-      </>
-    }
 	</body>
 </html>

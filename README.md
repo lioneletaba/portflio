@@ -1,7 +1,7 @@
 # Lionel Etaba's Portfolio
 
 Simple portfolio to showcase my work, built with Astro
-<img src="public/preview.png" alt="Site Preview" width="600"/>
+<img src="public/preview.png" alt="Site Preview" width="800" height="auto" />
 
 ---
 

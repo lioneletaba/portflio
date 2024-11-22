@@ -1,0 +1,99 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc" />
+  
+  <!-- Grid pattern background -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 40 M 0 0 L 40 40" stroke="#e2e8f0" stroke-width="0.5" fill="none"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#grid)" opacity="0.2"/>
+
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
+    Beyond Traditional File Uploads
+  </text>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#3b82f6">
+    Scaling with Presigned URLs
+  </text>
+
+  <!-- Step 1: Client Request -->
+  <rect x="50" y="120" width="120" height="60" rx="5" fill="#e2e8f0"/>
+  <text x="110" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1e293b">Client</text>
+  <text x="110" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#64748b">1. Request Upload URL</text>
+
+  <!-- Step 2: Application Server -->
+  <rect x="250" y="120" width="120" height="60" rx="5" fill="#3b82f6"/>
+  <text x="310" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">App Server</text>
+  <text x="310" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">2. Generate URL</text>
+
+  <!-- Step 3: AWS S3 -->
+  <rect x="450" y="120" width="120" height="60" rx="5" fill="#fb923c"/>
+  <text x="510" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">AWS S3</text>
+  <text x="510" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">3. Sign URL</text>
+
+  <!-- Step 4: S3 Bucket -->
+  <rect x="650" y="120" width="120" height="60" rx="5" fill="#10b981"/>
+  <text x="710" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">S3 Bucket</text>
+  <text x="710" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">4. Store File</text>
+
+  <!-- Connecting Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Request Flow Arrows -->
+  <!-- Client to App Server -->
+  <path d="M170 150 L250 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- App Server to AWS S3 -->
+  <path d="M370 150 L450 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- AWS S3 back to App Server -->
+  <path d="M450 180 L370 180" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- App Server back to Client -->
+  <path d="M250 180 L170 180" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Direct Upload Arrow -->
+  <path d="M110 200 L710 200" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Code Snippets -->
+  <rect x="50" y="250" width="200" height="100" rx="5" fill="#1e293b" opacity="0.9"/>
+  <foreignObject x="60" y="260" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #e2e8f0; font-family: monospace; font-size: 10px; white-space: pre-wrap;">
+// 1. Request URL
+fetch('/request-upload', {
+  method: 'POST',
+  body: JSON.stringify({
+    filename: 'example.pdf'
+  })
+});</div>
+  </foreignObject>
+
+  <rect x="300" y="250" width="200" height="100" rx="5" fill="#1e293b" opacity="0.9"/>
+  <foreignObject x="310" y="260" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #e2e8f0; font-family: monospace; font-size: 10px; white-space: pre-wrap;">
+// 2. Generate Presigned URL
+s3.generatePresignedUrl({
+  Bucket: 'my-bucket',
+  Key: file_key,
+  Expires: 3600
+});</div>
+  </foreignObject>
+
+  <rect x="550" y="250" width="200" height="100" rx="5" fill="#1e293b" opacity="0.9"/>
+  <foreignObject x="560" y="260" width="180" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="color: #e2e8f0; font-family: monospace; font-size: 10px; white-space: pre-wrap;">
+// 3. Upload File
+fetch(presignedUrl, {
+  method: 'PUT',
+  body: file
+});</div>
+  </foreignObject>
+
+  <!-- Labels -->
+  <text x="410" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#10b981">Direct File Upload</text>
+
+  <!-- Security Badge -->
+  <circle cx="750" y="320" r="20" fill="#10b981"/>
+  <path d="M740 320 L750 330 L760 310" stroke="white" stroke-width="3" fill="none"/>
+</svg>

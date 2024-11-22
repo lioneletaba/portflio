@@ -2,8 +2,8 @@
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import BaseLayout from '@src/layouts/BaseLayout.astro';
-import { slugify, unslugify } from '@src/utils';
-import PostsByYear from '@src/components/PostsByYear.astro';
+import { slugify, unslugify } from '@src/lib/utils';
+import Posts from '@src/components/sections/Posts.astro';
 
 type BlogPost = CollectionEntry<'blog'>;
 export const getStaticPaths = async () => {
@@ -19,20 +19,14 @@ export const getStaticPaths = async () => {
 };
 
 const { tag } = Astro.params;
-const allPosts: BlogPost[] = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const taggedPosts = allPosts.filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
 const title = `All Posts Tagged with ${unslugify(tag || '')}`;
 const description = `All Posts Tagged with ${unslugify(tag || '')}`;
 ---
 
-<BaseLayout
-	title={title}
-	description={description}
->
-  <div class='container'>
-    <div class="mb-10">
-      <h1 class="text-3xl font-bold mb-2">{title}</h1>
-    </div>
-    <PostsByYear posts={taggedPosts}/>
-  </div>
+<BaseLayout title={title} description={description}>
+	<div class='container'>
+		<div class='max-w-screen-md mx-auto'>
+			<Posts tag={tag} />
+		</div>
+	</div>
 </BaseLayout>

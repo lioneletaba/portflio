@@ -80,16 +80,28 @@
     scroll-padding-top: 6rem;
     scroll-behavior: smooth;
 
-    --color-text-base: 0, 0, 0;
-    --color-text-muted: 120, 120, 120;
-    --color-text-inverted: 255, 255, 255;
-    --color-fill: 245, 245, 245;
-    --muted: 200, 200, 200;
-    --color: 249, 115, 22;
-    --color-button-accent: 249, 115, 22;
-    --color-button-accent-hover: 55, 55, 55;
-    --color-button-muted: 244, 239, 238;
-    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --color-text-base: 15, 23, 42;
+    --color-text-muted: 100, 116, 139;
+    --color-text-inverted: 240, 240, 240;
+    --color-fill: 203, 213, 225;
+    --muted: 148, 163, 184;
+    --color: 59, 130, 246;
+    --color-button-accent: 59, 130, 246;
+    --color-button-accent-hover: 0, 185, 255;
+    --color-button-muted: 226, 232, 240;
+    --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+    --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
+
+    /* --color-text-base: 0, 0, 0; */
+    /* --color-text-muted: 120, 120, 120; */
+    /* --color-text-inverted: 255, 255, 255; */
+    /* --color-fill: 245, 245, 245; */
+    /* --muted: 200, 200, 200; */
+    /* --color: 249, 115, 22; */
+    /* --color-button-accent: 249, 115, 22; */
+    /* --color-button-accent-hover: 55, 55, 55; */
+    /* --color-button-muted: 244, 239, 238; */
+    /* --swiper-pagination-bullet-inactive-opacity: 0.5; */
 
     [data-theme="blue"] {
       --color-text-base: 15, 23, 42;
@@ -168,16 +180,32 @@
   }
 
   .dark {
-    --color-text-base: 255, 255, 255;
-    --color-text-muted: 150, 150, 150;
-    --color-text-inverted: 255, 255, 255;
-    --color-fill: 18, 18, 18;
-    --muted: 36, 36, 36;
-    --color: 227, 77, 10;
-    --color-button-accent: 227, 77, 10;
-    --color-button-accent-hover: 231, 121, 43;
-    --color-button-muted: 26, 26, 26;
-    --swiper-pagination-bullet-inactive-opacity: 1;
+
+
+    --color-text-base: 248, 250, 252;
+    --color-text-muted: 148, 163, 184;
+    --color-text-inverted: 240, 240, 240;
+    --color-fill: 2, 6, 23;
+    --muted: 51, 65, 85;
+    --color: 59, 130, 246;
+    --color-button-accent: 59, 130, 246;
+    --color-button-accent-hover: 0, 185, 255;
+    --color-button-muted: 30, 41, 59;
+    --swiper-pagination-color: rgba(var(--color-button-accent), 1);
+    --swiper-pagination-bullet-inactive-color: rgba(var(--color-text-muted));
+
+
+
+    /* --color-text-base: 255, 255, 255; */
+    /* --color-text-muted: 150, 150, 150; */
+    /* --color-text-inverted: 255, 255, 255; */
+    /* --color-fill: 18, 18, 18; */
+    /* --muted: 36, 36, 36; */
+    /* --color: 227, 77, 10; */
+    /* --color-button-accent: 227, 77, 10; */
+    /* --color-button-accent-hover: 231, 121, 43; */
+    /* --color-button-muted: 26, 26, 26; */
+    /* --swiper-pagination-bullet-inactive-opacity: 1; */
 
     [data-theme="blue"] {
       --color-text-base: 248, 250, 252;

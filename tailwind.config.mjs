@@ -10,6 +10,14 @@ function withOpacity(variableName) {
     return `rgb(var(${variableName}))`;
   };
 }
+
+function getColor(variableName, opacity) {
+  if (opacity !== undefined) {
+    return `rgba(var(${variableName}), ${opacity})`;
+  }
+  return `rgb(var(${variableName}))`;
+}
+
 export const darkMode = ["class"];
 export const content = [
   "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
@@ -37,6 +45,7 @@ export const theme = {
         ...defaultTheme.fontFamily.sans,
       ],
     },
+
     textColor: {
       skin: {
         base: withOpacity("--color-text-base"),
@@ -121,6 +130,47 @@ export const theme = {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
     },
+    typography: {
+      DEFAULT: {
+        css: {
+          color: getColor("--color-text-base"), // Default text color for light mode
+          h1: { color: getColor("--color-text-muted") },
+          h2: { color: getColor("--color-text-muted") },
+          h3: { color: getColor("--color-text-muted") },
+          p: { color: getColor("--color-text") },
+          a: {
+            color: getColor("--color-text-muted"),
+            "&:hover": { color: getColor("--color-text-muted") },
+          },
+          strong: { color: getColor("--color-text-muted") },
+
+          pre: {
+            color: getColor("--color-text-muted"),
+            backgroundColor: getColor("--muted", 0.2),
+            backdropFilter: "blur(12px)",
+          },
+          code: { color: getColor("--color-text-muted") },
+          blockquote: {
+            color: getColor("--color-text-muted"),
+            fontStyle: "italic",
+          },
+        },
+      },
+      // dark: {
+      //   css: {
+      //     color: "#e2e8f0", // Default text color for dark mode
+      //     h1: { color: "#f7fafc" },
+      //     h2: { color: "#edf2f7" },
+      //     h3: { color: "#e2e8f0" },
+      //     a: { color: "#90cdf4", "&:hover": { color: "#63b3ed" } },
+      //     strong: { color: "#f7fafc" },
+      //     blockquote: { color: "#a0aec0", fontStyle: "italic" },
+      //   },
+      // },
+    },
   },
 };
-export const plugins = [require("tailwindcss-animate")];
+export const plugins = [
+  require("tailwindcss-animate"),
+  require("@tailwindcss/typography"),
+];

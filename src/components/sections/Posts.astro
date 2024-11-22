@@ -3,10 +3,20 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import PostCard from '../PostCard.astro';
 import Section from '../Section.astro';
+import { slugify } from '@src/lib/utils';
+
+interface Props {
+	tag?: string;
+	className?: string;
+}
 
 type BlogPost = CollectionEntry<'blog'>;
 
-const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const { tag } = Astro.props;
+let posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+if (tag) {
+	posts = posts.filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
+}
 ---
 
 <Section id='posts' className={Astro.props.className} title='Posts'>

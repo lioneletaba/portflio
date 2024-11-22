@@ -5,7 +5,7 @@ import { Icon } from 'astro-icon/components';
 const skills = CV.skills;
 ---
 
-<Section id='skills' className={Astro.props.className} title='Skills'>
+<Section id='skills' className={Astro.props.className} title="What I've used so far">
 	<ul class='inline-flex print:mt-4 flex-wrap gap-4 [&>li>svg]:text-skin-hue [&>li]:text-sm'>
 		{
 			skills.map(({ name, icon, level }) => {

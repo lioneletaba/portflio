@@ -24,8 +24,8 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props;
 				<div class='items-center text-skin-muted inline-flex mb-2 space-x-1'>
 					<FormattedDate date={new Date(post.data.pubDate)} />
 				</div>
-				<p class='text-skin-base uppercase text-xl font-display'>{post.data.title}</p>
-				<p class='mt-6 text-skin-base line-clamp-2 text-sm'>{post.data.description}</p>
+				<p class='text-skin-base line-clamp-2 text-lg font-display'>{post.data.title}</p>
+				<p class='mt-6 text-skin-muted line-clamp-4 text-sm'>{post.data.description}</p>
 			</div>
 		</div>
 	</article>

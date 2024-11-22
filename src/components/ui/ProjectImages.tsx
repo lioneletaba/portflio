@@ -23,7 +23,7 @@ export default function ProjectImagesSlider({ images }: Props) {
       className="max-h-full"
     >
       {images.map((el, index) => (
-        <div key={index}>
+        <div key={`${el}-${index}`}>
           <SwiperSlide className="">
             <img
               src={el}

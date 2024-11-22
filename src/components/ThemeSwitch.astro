@@ -96,6 +96,7 @@ import { Icon } from 'astro-icon/components';
 	// Initialize theme based on user preference or system setting
 	if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
 		isDark = true;
+		console.log({ isDark });
 		updateTheme();
 	}
 
@@ -110,10 +111,8 @@ import { Icon } from 'astro-icon/components';
 
 	// Listen for changes in system color scheme
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-		if (!('theme' in localStorage)) {
-			isDark = e.matches;
-			updateTheme();
-		}
+		isDark = e.matches;
+		updateTheme();
 	});
 </script>
 

@@ -20,6 +20,7 @@ const {
 	data: { title, seoTitle, description, coverImage, pubDate, updatedDate, tags, coverVideo = null }
 } = post;
 const { Content, headings } = await post.render();
+export const prerender = true;
 ---
 
 <BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>

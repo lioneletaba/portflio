@@ -21,6 +21,8 @@ export const getStaticPaths = async () => {
 const { tag } = Astro.params;
 const title = `All Posts Tagged with ${unslugify(tag || '')}`;
 const description = `All Posts Tagged with ${unslugify(tag || '')}`;
+
+export const prerender = true;
 ---
 
 <BaseLayout title={title} description={description}>

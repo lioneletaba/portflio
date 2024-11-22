@@ -51,6 +51,15 @@ export default defineConfig({
   },
 
   output: "server",
+  build: {
+    inlineStylesheets: "never",
+    assets: "assets",
+    excludeMiddleware: true,
+    split: true,
+  },
+  compressHTML: true,
+  optimizeImages: true,
+  optimizeCss: true,
   adapter: cloudflare(),
 });
 

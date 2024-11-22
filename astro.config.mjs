@@ -9,6 +9,8 @@ import partytown from "@astrojs/partytown";
 
 import react from "@astrojs/react";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -19,7 +21,9 @@ export default defineConfig({
       __vite__injectQuery: false,
     },
   },
+
   site: "https://lioneletaba.dev",
+
   integrations: [
     mdx(),
     sitemap(),
@@ -38,10 +42,14 @@ export default defineConfig({
     }),
     react(),
   ],
+
   markdown: {
     extendDefaultPlugins: true,
     rehypePlugins: [[autoNewTabExternalLinks, {
       domain: "localhost:4321",
     }]],
   },
+
+  output: "server",
+  adapter: cloudflare(),
 });

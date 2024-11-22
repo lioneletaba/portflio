@@ -2,6 +2,8 @@
 
 Simple portfolio to showcase my work, built with Astro
 
+![Preview](public/preview.png)
+
 ---
 
 Features:

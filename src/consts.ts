@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "Lionel Etaba";
 export const SITE_TAGLINE = "";
-export const SITE_DESCRIPTION = "Full stack developer";
+export const SITE_DESCRIPTION = "Full Stack Developer";

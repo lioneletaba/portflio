@@ -33,7 +33,7 @@ export const CV = {
         "network": "Personal",
         "icon": "mdi:resume",
         "url":
-          "https://app.enhancv.com/share/7f3826cd/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic",
+          "https://app.enhancv.com/share/5f1e233d/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic",
       },
     ],
   },

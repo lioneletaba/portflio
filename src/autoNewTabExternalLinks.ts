@@ -1,51 +1,52 @@
-import type { RehypePlugin } from '@astrojs/markdown-remark';
-import { visit } from 'unist-util-visit';
+import type { RehypePlugin } from "@astrojs/markdown-remark";
+import { visit } from "unist-util-visit";
 
 interface Options {
-	domain: string;
+  domain: string;
 }
 
 export const autoNewTabExternalLinks: RehypePlugin = (options?: Options) => {
-	const siteDomain = options?.domain ?? '';
+  const siteDomain = options?.domain ?? "";
 
-	return (tree: unknown) => {
-		visit(tree, (node: any) => {
-			if (node.type != 'element') {
-				return;
-			}
+  return (tree: any) => {
+    visit(tree, (node: any) => {
+      if (node.type != "element") {
+        return;
+      }
 
-			const element = node;
+      const element = node;
 
-			if (!isAnchor(element)) {
-				return;
-			}
+      if (!isAnchor(element)) {
+        return;
+      }
 
-			const url = getUrl(element);
+      const url = getUrl(element);
 
-			if (isExternal(url, siteDomain)) {
-				element.properties!['target'] = '_blank';
-				element.properties!['rel'] = 'noopener';
-			}
-		});
-	};
+      if (isExternal(url, siteDomain)) {
+        element.properties!["target"] = "_blank";
+        element.properties!["rel"] = "noopener";
+      }
+    });
+  };
 };
 
-const isAnchor = (element: any) => element.tagName == 'a' && element.properties && 'href' in element.properties;
+const isAnchor = (element: any) =>
+  element.tagName == "a" && element.properties && "href" in element.properties;
 
 const getUrl = (element: any) => {
-	if (!element.properties) {
-		return '';
-	}
+  if (!element.properties) {
+    return "";
+  }
 
-	const url = element.properties['href'];
+  const url = element.properties["href"];
 
-	if (!url) {
-		return '';
-	}
+  if (!url) {
+    return "";
+  }
 
-	return url.toString();
+  return url.toString();
 };
 
 const isExternal = (url: string, domain: string) => {
-	return url.startsWith('http') && !url.includes(domain);
+  return url.startsWith("http") && !url.includes(domain);
 };

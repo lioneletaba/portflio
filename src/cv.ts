@@ -88,7 +88,7 @@ export const CV = {
   "work": [
     {
       "name": "Seminar community",
-      "position": "Sofware engineering consultant",
+      "position": "Sotfware engineering consultant",
       "location_type": "Remote",
       "location": "USA",
       "url": "https://seminar.community",
@@ -122,7 +122,7 @@ export const CV = {
     },
     {
       "name": "Kibo School",
-      "position": "Sofware engineer",
+      "position": "Software engineer",
       "location_type": "Remote",
       "location": "USA",
       "url": "https://seminar.community",
@@ -196,7 +196,7 @@ export const CV = {
     },
     {
       "name": "Djemo Digital",
-      "position": "Lead Sofware Developer",
+      "position": "Lead Software Developer",
       "location_type": "Hybrid",
       "location": "Yaounde, Cameroon",
       "url": "https://djemobtp.org/site",
@@ -232,7 +232,7 @@ export const CV = {
     },
     {
       "name": "Bara Technologies",
-      "position": "Full-stack Sofware Developer",
+      "position": "Full-stack Software Developer",
       "location_type": "Remote",
       "location": "Canada",
       "url": "https://identitequebec.ca/",

@@ -21,7 +21,7 @@ export const CV = {
         "network": "Linkedin",
         "icon": "mdi:linkedin",
         "username": "lioneletaba",
-        "url": "https://linkedin.com/lioneletaba",
+        "url": "https://linkedin.com/in/lioneletaba",
       },
       {
         "network": "GitHub",
